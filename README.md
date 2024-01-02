@@ -45,19 +45,26 @@ Pemrograman bahasa java merupakan salah satu bahasa yang digunakan untuk membuat
 
 ### Algortitma
 
-1. Buat Database (Lewati langkah ini jikalau anda sudah paham database mana yang ditargetkan, atau import file sql pada folder sql di database **toko-berada**)
+#### 1. Buat Database (Lewati langkah ini jikalau anda sudah paham database mana yang ditargetkan, atau import file sql pada folder sql di database **toko-berada**)
 - Jalankan Apache Server dan MySQL Server di XAMPP
+  
 ![XAMPP 1][image-xampp1]
 - Buka [phpmyadmin][link-phpmyadmin]
 - Buat Database dan tabel (dalam hal ini nama databasenya **toko-berada** dan nama tabelnya **login** yang berisi atribute **username** dan **password** )
+  
 ![Buat Database][image-db-create]
 ![Buat Tabel][image-tbl-create]
 ![Buat Atribute][image-attr-tbl-create]
 - Isi tabel
+  
 ![Isi tabel][image-insert-table]
-2. Buat API (istilah saya pinjam, karena kemungkinan konsep-nya salah namun untuk menyederhanakan maksud.)
+
+#### 2. Buat API (istilah saya pinjam, karena kemungkinan konsep-nya salah namun untuk menyederhanakan maksud.)
+
 - Buat file PHP sebagai API (supaya terlihat rapih, buat folder **api** pada htdocs dan **toko-berada.php** untuk nama filenya)
+  
 ![Buat File API][image-file-api-create]
+
 - isikan file tersebut seperti berikut (atau cek di folder xampp pada repo ini)
 ```php
 <?php
@@ -107,10 +114,12 @@ $mysqli->close();
 ?>
 ```
 
-3. Import Library Volley (**implementation 'com.android.volley:volley:1.2.1'**) pada build.gradle (Module:app)
+#### 3. Import Library Volley (**implementation 'com.android.volley:volley:1.2.1'**) pada build.gradle (Module:app)
+   
 ![Import Library Volley][image-import-libary]
 
-4. Setup
+#### 4. Setup
+   
 - tambahkan beberapa pengaturan pada AndroidManifest.xml
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -135,14 +144,17 @@ $mysqli->close();
 ```
 
 - Cek ipserver (dalam hal ini komputer kita jadi server (terbukti Apache dan MySQL running)) dan masukan kedalam String URL (lihat juga Algoritma No.2 Point 1, terlihat direktorinya)
+  
 ![Cek IP][image-endpoint]
+
 - Fungsi Parameter Request (Keterkaitan LoginActivity.java dengan toko-berada.php)
+  
 ![Fungsi Parameter][image-param]
 ![Fungsi Parameter 2][image-param2]
+
 - Fungsi Parameter Response
+  
 ![Fungsi Parameter Response][image-result]
-
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
